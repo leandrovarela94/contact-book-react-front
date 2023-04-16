@@ -23,7 +23,7 @@ export default function Form() {
           }}
         >
           <Typography component="h1" variant="h3">
-            Contacts Book
+            Contact Book
           </Typography>
         </Box>
         <Box className="contacts-inputs-form"></Box>
