@@ -19,7 +19,7 @@ const ContactRenders = () => {
   const [load, setLoad] = useState(true);
 
   const getContacts = () => {
-    fetch("http://127.0.0.1:8000/contacts/", {
+    fetch("https://fastapi-production-d71b.up.railway.app/contacts/", {
       method: "GET",
     })
       .then((resp) => resp.json())
@@ -37,7 +37,7 @@ const ContactRenders = () => {
 
     setLoad(true);
 
-    fetch("http://127.0.0.1:8000/contacts/", {
+    fetch("https://fastapi-production-d71b.up.railway.app/contacts/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +60,7 @@ const ContactRenders = () => {
   const deleteContact = (id) => {
     setLoad(true);
 
-    fetch(`http://127.0.0.1:8000/contacts/${id}`, {
+    fetch(`https://fastapi-production-d71b.up.railway.app//contacts/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -78,7 +78,7 @@ const ContactRenders = () => {
     const { id, name, phone, email } = currentContact;
     setLoad(true);
 
-    fetch(`http://127.0.0.1:8000/contacts/${id}`, {
+    fetch(`https://fastapi-production-d71b.up.railway.app/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
