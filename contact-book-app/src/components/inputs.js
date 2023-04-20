@@ -18,8 +18,10 @@ const ContactRenders = () => {
   const [refresh, setRefresh] = useState(false);
   const [load, setLoad] = useState(true);
 
+  const URL = "https://fastapi-production-53db.up.railway.app/";
+
   const getContacts = () => {
-    fetch("https://fastapi-production-d71b.up.railway.app/contacts/", {
+    fetch(`${URL}contacts/`, {
       method: "GET",
     })
       .then((resp) => resp.json())
@@ -37,7 +39,7 @@ const ContactRenders = () => {
 
     setLoad(true);
 
-    fetch("https://fastapi-production-d71b.up.railway.app/contacts/", {
+    fetch(`${URL}contacts/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +62,7 @@ const ContactRenders = () => {
   const deleteContact = (id) => {
     setLoad(true);
 
-    fetch(`https://fastapi-production-d71b.up.railway.app//contacts/${id}`, {
+    fetch(`${URL}contacts/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -78,7 +80,7 @@ const ContactRenders = () => {
     const { id, name, phone, email } = currentContact;
     setLoad(true);
 
-    fetch(`https://fastapi-production-d71b.up.railway.app/${id}`, {
+    fetch(`${URL}contacts/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
