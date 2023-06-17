@@ -18,7 +18,7 @@ const ContactRenders = () => {
   const [refresh, setRefresh] = useState(false);
   const [load, setLoad] = useState(true);
 
-  const URL = "https://fastapi-varela.up.railway.app/";
+  const URL = "https://contactbook1-leandrovareladev.b4a.run/";
 
   const getContacts = () => {
     fetch(`${URL}contacts/`, {
